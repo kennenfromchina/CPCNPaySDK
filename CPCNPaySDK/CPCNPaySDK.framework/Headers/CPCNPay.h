@@ -41,9 +41,9 @@ NS_ASSUME_NONNULL_BEGIN
  调微信支付
 
  @param authCode 授权码
- @return 调用成功或失败
+ @param completion 调用结果回调block
  */
-- (BOOL)wxPayWithAuthCode:(NSString *)authCode;
+- (void)wxPayWithAuthCode:(NSString *)authCode completion:(void (^ __nullable)(BOOL success))completion;
 @end
 
 NS_ASSUME_NONNULL_END
